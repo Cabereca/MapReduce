@@ -13,7 +13,7 @@ A implementação do MapReduce segue a arquitetura clássica:
 #### Reduce: Consolida os resultados de contagem das palavras em um único arquivo de saída, também usando threads para paralelização.
 
 ## Funcionalidades
-- Geração de Arquivos: Gera arquivos de texto com palavras aleatórias (usando o módulo FileGenerator).
+- Geração de Arquivos: Gera arquivos de texto com palavras aleatórias (usando o módulo Gerador de Arquivos).
 - MapReduce Paralelizado: Utiliza threads para paralelizar tanto a fase de mapeamento quanto a de redução.
 - Limpeza de Arquivos Anteriores: Antes de iniciar o processamento, os arquivos de saída anteriores (se existirem) são apagados, garantindo um ambiente limpo para cada execução.
 
@@ -23,7 +23,7 @@ A implementação do MapReduce segue a arquitetura clássica:
 
 ## Como Executar
 ### Requisitos:
-Python 3.x: Certifique-se de que o Python 3 esteja instalado no seu ambiente.
+Python 3: Certifique-se de que o Python 3 esteja instalado no seu ambiente.
 ### Passos:
 Baixe ou Clone o Repositório: Se ainda não tiver o repositório, clone-o ou baixe-o para sua máquina local.
 
