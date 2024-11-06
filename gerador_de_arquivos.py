@@ -23,9 +23,8 @@ class FileGenerator:
         if os.path.exists(output_dir):
             # Apagar os arquivos antigos dentro do diretório
             deletar_arquivos(output_dir)
-        else:
-            # Se o diretório não existe, criamos ele
-            os.makedirs(output_dir)
+        # Se o diretório não existe, criamos ele
+        os.makedirs(output_dir)
 
         # Gera palavras aleatórias e as divide em arquivos
         palavras = self._gerar_palavras_aleatorias()
