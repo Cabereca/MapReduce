@@ -3,7 +3,7 @@ from controller import controller
 
 if __name__ == "__main__":
     # Diretório onde os arquivos estão localizados
-    arquivos_dir = 'aquivos_aleatorios'
+    aquivos_aleatorios_dir = 'aquivos_aleatorios'
     output_dir = 'diretorio_temporario'
 
     # Obter os arquivos gerados pelo Gerador de Arquivos
