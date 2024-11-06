@@ -2,21 +2,12 @@ import threading
 import os
 from map import map_function
 from reduce import reduce_function
-
-def limpar_arquivos(output_dir):
-    # Apagar arquivo temporário se existir
-    tmp_file = os.path.join(output_dir, 'arquivo_temporario.tmp')
-    if os.path.exists(tmp_file):
-        os.remove(tmp_file)
-
-    # Apagar o arquivo final se existir
-    final_file = 'contagem_final'
-    if os.path.exists(final_file):
-        os.remove(final_file)
+from reset import limpar_arquivos
 
 def controller(input_files, output_dir):
      # Apagar arquivos antigos antes de começar
-    limpar_arquivos(output_dir)
+    if os.path.exists(output_dir):
+        limpar_arquivos(output_dir)
 
     map_threads = []
 

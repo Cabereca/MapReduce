@@ -31,7 +31,7 @@ Baixe ou Clone o Repositório: Se ainda não tiver o repositório, clone-o ou ba
 git clone https://github.com/Cabereca/MapReduce.git
 cd MapReduce
 ```
-Prepare os Arquivos de Entrada O projeto inclui um diretório /aquivos_aleatorios onde os arquivos de texto com palavras serão armazenados. Os arquivos podem ser gerados com o módulo Gerador de Arquivos. Certifique-se de que o diretório aquivos_aleatorios contenha arquivos de texto com palavras geradas aleatoriamente.
+Prepare os Arquivos de Entrada O projeto inclui um diretório /arquivos_aleatorios onde os arquivos de texto com palavras serão armazenados. Os arquivos podem ser gerados com o módulo Gerador de Arquivos. Certifique-se de que o diretório arquivos_aleatorios contenha arquivos de texto com palavras geradas aleatoriamente.
 
 Execute o Código Para rodar o código, basta executar o arquivo main.py. Este arquivo irá gerar os arquivos de entrada e executar o processo de MapReduce.
 

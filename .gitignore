@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Projeto
-/aquivos_aleatorios
+/arquivos_aleatorios
 /diretorio_temporario
 contagem_final
 
