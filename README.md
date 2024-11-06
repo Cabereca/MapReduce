@@ -9,8 +9,8 @@ Este trabalho foi desenvolvido como parte da disciplina Sistemas Distribuídos, 
 ## Arquitetura do Sistema
 A implementação do MapReduce segue a arquitetura clássica:
 
-Map: Divide a tarefa de contar as palavras em vários arquivos de entrada, processando-os em paralelo por meio de threads.
-Reduce: Consolida os resultados de contagem das palavras em um único arquivo de saída, também usando threads para paralelização.
+#### Map: Divide a tarefa de contar as palavras em vários arquivos de entrada, processando-os em paralelo por meio de threads.
+#### Reduce: Consolida os resultados de contagem das palavras em um único arquivo de saída, também usando threads para paralelização.
 
 ## Funcionalidades
 - Geração de Arquivos: Gera arquivos de texto com palavras aleatórias (usando o módulo FileGenerator).
