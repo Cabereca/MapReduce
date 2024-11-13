@@ -4,7 +4,7 @@ from map import map_function
 from reduce import reduce_function
 from reset import limpar_arquivos
 
-def controller(input_files, output_dir):
+def controller(input_files, output_dir, pattern, is_regex):
      # Apagar arquivos antigos antes de começar
     if os.path.exists(output_dir):
         limpar_arquivos(output_dir)

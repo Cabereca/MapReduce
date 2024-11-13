@@ -7,8 +7,8 @@ if __name__ == "__main__":
 
     # Pega o padrão de expressão regular ou texto simples como argumento
     if len(sys.argv) < 4:
-        print("Uso: python grep_distribuido.py <padrão> <diretório_entrada> <regex|texto>")
-         sys.exit(1)
+        print("Uso: python main.py <padrão> <diretório_entrada> <regex|texto>")
+        sys.exit(1)
 
     # Padrão de expressão regular ou texto simples fornecido pelo usuário
     pattern = sys.argv[1]
