@@ -16,7 +16,7 @@ def controller(input_files, output_dir):
 
     # Executa a função Map em threads separadas
     for file_part in input_files:
-        t = threading.Thread(target=map_function, args=(file_part, output_dir))
+        t = threading.Thread(target=map_function, args=(file_part, output_dir, pattern, is_regex))
         map_threads.append(t)
         t.start()
 
@@ -24,25 +24,5 @@ def controller(input_files, output_dir):
     for t in map_threads:
         t.join()
 
-    # Agrupar os resultados do arquivo temporário
-    agrupamento = {}
-    tmp = open(os.path.join(output_dir, 'arquivo_temporario.tmp'), 'r')
-    for line in tmp:
-        key, value = line.split()
-        if key in agrupamento:
-            agrupamento[key].append(int(value))
-        else:
-            agrupamento[key] = [int(value)]
-
-    tmp.close()
-
-    # Executar a função Reduce em threads separadas para cada chave
-    reduce_threads = []
-    for key in agrupamento.keys():
-        t = threading.Thread(target=reduce_function, args=(key, agrupamento[key]))
-        reduce_threads.append(t)
-        t.start()
-
-    # Espera todas as threads Reduce terminarem
-    for t in reduce_threads:
-        t.join()
+# Executa a função Reduce para consolidar os resultados
+    reduce_function(output_dir)

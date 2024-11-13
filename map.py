@@ -1,13 +1,18 @@
-import os
-import random
+import re
 
-def map_function(arquivo, output_dir):
-    with open(arquivo, 'r') as f:
-        with open(os.path.join(output_dir, 'arquivo_temporario.tmp'), 'a') as f_out:
-            # Itera sobre cada linha do arquivo
-            for linha in f:
-                # Divide a linha em palavras
-                palavras = linha.split()
-                # Conta as ocorrências das palavras e escreve diretamente no arquivo temporário
-                for palavra in palavras:
-                    f_out.write(f"{palavra} 1\n")
+def map_function(file_part, output_dir, pattern, is_regex):
+    with open(file_part, 'r') as f:
+        with open(os.path.join(output_dir, 'arquivoTemporario.tmp'), 'a') as f_out:
+            # Se for regex, compila a expressão regular
+            if is_regex:
+                regex = re.compile(pattern)
+
+            for line in f:
+                if is_regex:
+                    # Se for regex, usa search para encontrar o padrão na linha
+                    if regex.search(line):
+                        f_out.write(line)  
+                else:
+                    # Se for texto simples, usa 'in' para verificar se o padrão está na linha
+                    if pattern in line:
+                        f_out.write(line) 
