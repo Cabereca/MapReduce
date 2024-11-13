@@ -2,19 +2,12 @@ import os
 import random
 
 def map_function(arquivo, output_dir):
-    contador_de_palavras = {}
-
-    # Abrir a parte do arquivo e contar as palavras
     with open(arquivo, 'r') as f:
-        for linha in f:
-            palavras = linha.split()
-            for palavra in palavras:
-                if palavra not in contador_de_palavras:
-                    contador_de_palavras[palavra] = 1
-                else:
-                    contador_de_palavras[palavra] += 1
-
-    # Gravar o resultado em um arquivo temporário
-    with open(os.path.join(output_dir, 'arquivo_temporario.tmp'), 'a') as f_out:
-        for palavra, count in contador_de_palavras.items():
-            f_out.write(f"{palavra} {count}\n")
+        with open(os.path.join(output_dir, 'arquivo_temporario.tmp'), 'a') as f_out:
+            # Itera sobre cada linha do arquivo
+            for linha in f:
+                # Divide a linha em palavras
+                palavras = linha.split()
+                # Conta as ocorrências das palavras e escreve diretamente no arquivo temporário
+                for palavra in palavras:
+                    f_out.write(f"{palavra} 1\n")
