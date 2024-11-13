@@ -8,7 +8,7 @@ def limpar_arquivos(output_dir='diretorio_temporario'):
         os.rmdir(output_dir)
 
     # Apagar o arquivo final se existir
-    final_file = 'resultado.txt'
+    final_file = 'resultado'
     if os.path.exists(final_file):
         os.remove(final_file)
 
